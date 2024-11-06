@@ -18,13 +18,13 @@ int RandomInt(int min, int max)
 
 int main(void)
 {
+	// 主人公の HP
+	int playerHP = 200;
+
+	// 敵の HP
+	int enemyHP = 200;
 	for (;;)
 	{
-		// 主人公の HP
-		int playerHP = 200;
-
-		// 敵の HP
-		int enemyHP = 200;
 
 		puts("----------------------------");
 		printf("主人公\t HP: %d\n", playerHP);
@@ -44,15 +44,16 @@ int main(void)
 			puts("主人公の攻撃！");
 
 			// 敵に与えるダメージを 20 ～ 40 の範囲でランダムに決定
-			int damage = RandomInt(20, 40);
+			int damage = RandomInt(30, 50);
 			printf("敵に%dのダメージ！\n", damage);
 
 			enemyHP -= damage;
 		}
 		else if (action == 2) // 回復
 		{
-			puts("主人公は 100 回復した！");
-			playerHP += 100;
+            //回復連打防止
+			puts("主人公は 40 回復した！");
+			playerHP += 40;
 		}
 		else if (action == 3) // 逃げる
 		{
@@ -64,7 +65,7 @@ int main(void)
 			puts("敵の攻撃！");
 
 			// 主人公に与えるダメージを 30 ～ 50 の範囲でランダムに決定
-			int damage = RandomInt(30, 50);
+			int damage = RandomInt(20, 60);
 			printf("主人公に%dのダメージ！\n", damage);
 
 			playerHP -= damage;
