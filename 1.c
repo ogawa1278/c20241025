@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main(void)
-{
+int main(void){
 	puts("アメリカの首都は？");
 	puts("1: ワシントン D.C.");
 	puts("2: パリ");
@@ -11,12 +10,10 @@ int main(void)
 	int answer;
 	scanf("%d", &answer);
 
-	if (answer = 1)
-	{
+	if(answer == 1){
 		puts("正解！");
 	}
-	else
-	{
+    else{
 		puts("不正解！");
 	}
 }
