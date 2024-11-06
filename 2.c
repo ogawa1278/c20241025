@@ -2,29 +2,30 @@
 
 int main(void)
 {
-	puts("点数を入力してください:");
+    puts("点数を入力してください:");
 
-	int score;
-	scanf("%d", &score);
+    int score;
+    scanf("%d", &score);
 
-	if (90 <= score <= 100)
-	{
-		puts("A+");
-	}
-	else if (80 <= score < 90)
-	{
-		puts("A");
-	}
-	else if (70 <= score < 80)
-	{
-		puts("B");
-	}
-	else if (60 <= score < 70)
-	{
-		puts("C");
-	}
-	else
-	{
-		puts("F");
-	}
+    if(score > 100){
+        puts("wow");
+    }
+    else if (90 <= score){
+        puts("A+");
+    }
+    else if (80 <= score){
+        puts("A");
+    }
+    else if (70 <= score){
+        puts("B");
+    }
+    else if (60 <= score){
+        puts("C");
+    }
+    else if(0 <= score){
+        puts("F");
+    }
+    else{
+        puts("How?");
+    }
 }
